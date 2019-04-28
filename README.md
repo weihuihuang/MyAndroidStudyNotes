@@ -24,7 +24,7 @@ App的流量消耗对用户来说是比较敏感的, 虽然最近开始流量比
 假如有 ABCDEFGABCDEFH → ABCDEFG(7,6)H。7 指的是往前第 7 个数开始，6 指的是重复串的长度，ABCDEFG(7,6)H 完全可以表示前面的串，并且是没有二义性的。  
 Gzip工作流程如下图
 ![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/gzip_pic.png)  
-（此图片来自网络）  
+                                                （此图片来自网络）  
 首先,客户端发请求给服务端,会带上请求头:Accept-Encoding:gzip。第二步，服务端接收到请求头后，可以选择压缩或不压缩。第三步，服务端选择压缩后，文件明
 显变小，同时在响应头加上Content-Encoding:gzip。第四步，客户端接收到响应后，根据响应头中是否带有Content-Encoding:gzip，判断文件是否被压缩，如果压缩就进行解压，如果没有压缩，就按照正常方式读取数据即可。
 ![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/fildder.png)  
