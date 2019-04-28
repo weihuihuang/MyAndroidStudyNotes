@@ -63,13 +63,13 @@ http缓存可以分为两类：
 
 这是3.1.3 版本AndroidStudio Network Monitor的截图，不同版本的界面不一样，打开相应的页面点击网络请求就可以看到发送合接收的数据了，以及网络状态等，这个比较简单，就不展开讲了。  
 
-#### fiddler
+#### (2)fiddler
 这个我们用的比较多，下图显示我们接口请求的发送和接收的数据  
 
 ![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/fiddler_1.png)
 
 其他还可以使用的工具也有，比如Charles，wireShark等等，这两个基本没用过，wireShark以前网络课学习tcp三次握手使用过，功能比较强大，但是用起来也麻烦。  
-#### (2)弱网下的app的使用情况  
+#### (3)弱网下的app的使用情况  
 
 这个是我之前比较忽略的点，一般测试比较多的是无网或者网络错误情况下的界面UI的展示。现在我们默认的请求超时时间是60秒。这次主要介绍的还是fiddler,在工具栏中找到Rules，再到Rules列表中找到Customize Rules  
 
@@ -90,7 +90,17 @@ request-trickle-delay代表的是你网络请求的延迟时间，response-trick
 ### 自己的设想和实现  
 我自己的设想是做一个小的工具进行使用，现在做了一个比较粗糙的版本。迭代开发之后可以开启此功能对修改的页面进行监控，app在前台时网络请求消耗是否有异常，在后台时是否有不必要的网络请求在后台运行，再对相关的代码进行定位。   
 
-项目地址：https://github.com/weihuihuang/TrafficMonitor
+项目地址：https://github.com/weihuihuang/TrafficMonitor   
+
+下面是第一个版本在前后台的部分效果图  
+
+![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/screenshot_1.jpg)    
+
+![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/screenshot_2.jpg)    
+
+![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/screenshot_3.jpg)   
+
+
 
 
 
