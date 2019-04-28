@@ -52,13 +52,38 @@ http缓存可以分为两类：
 
 ## 三、进行网络监测  
 
-## 一些网络监测的可视化的工具  
+### 一些网络监测的可视化的工具  
 
-### AndroidStudio自带的可视化工具 Network Monitor  
+#### AndroidStudio自带的可视化工具 Network Monitor  
 
-## 四、自己的设想和实现  
+![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/network_monitor.png)  
+这是3.1.3 版本AndroidStudio Network Monitor的截图，不同版本的界面不一样，打开相应的页面点击网络请求就可以看到发送合接收的数据了，以及网络状态等，这个比较简单，就不展开讲了。  
 
-网络监测也是比较重要的功能之一，我自己的设想是做一个小的工具进行使用，现在做了一个比较粗糙的版本。迭代开发之后可以开启此功能对修改的页面进行监控，app在前台时网络请求消耗是否有异常，在后台时是否有不必要的网络请求在后台运行，再对相关的代码进行定位。  
+#### fiddler
+这个我们用的比较多，下图显示我们接口请求的发送和接收的数据  
+![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/fiddler_1.png)
+
+其他还可以使用的工具也有，比如Charles，wireShark等等，这两个基本没用过，wireShark以前网络课学习tcp三次握手使用过，功能比较强大，但是用起来也麻烦。  
+#### 弱网下的app的使用情况  
+
+这个是我之前比较忽略的点，一般测试比较多的是无网或者网络错误情况下的界面UI的展示。现在我们默认的请求超时时间是60秒。这次主要介绍的还是fiddler,在工具栏中找到Rules，再到Rules列表中找到Customize Rules  
+![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/fiddler_3.png)    
+
+这个时候会弹出一个类似于文本编辑器的东西,在这个文本编辑器中使用Ctrl+F使用搜索功能搜索关键字：simulate，找到下图的代码段：
+![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/fiddler_4.png)    
+
+request-trickle-delay代表的是你网络请求的延迟时间，response-trickle-delay代表的是网络响应的延迟时间，单位都是毫秒，这里默认给的是300毫秒和150毫秒，修改这2个值即可模拟网络延迟和弱网络环境：  
+![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/fiddler_5.png)  
+
+接下来开启网络延迟，Rules功能中，找到Performance，然后在子选项中可以看到一个Simulate Modems Speeds，选中开启网络延迟，如果需要关闭网络延迟，再次点击即可。如下图显示： 
+![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/fiddler_6.png) 
+
+
+
+
+
+### 四、自己的设想和实现  
+我自己的设想是做一个小的工具进行使用，现在做了一个比较粗糙的版本。迭代开发之后可以开启此功能对修改的页面进行监控，app在前台时网络请求消耗是否有异常，在后台时是否有不必要的网络请求在后台运行，再对相关的代码进行定位。  
 项目地址：https://github.com/weihuihuang/TrafficMonitor
 
 
