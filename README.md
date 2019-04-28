@@ -69,7 +69,7 @@ http缓存可以分为两类：
 ![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/fiddler_1.png)
 
 其他还可以使用的工具也有，比如Charles，wireShark等等，这两个基本没用过，wireShark以前网络课学习tcp三次握手使用过，功能比较强大，但是用起来也麻烦。  
-#### (3)弱网下的app的使用情况  
+#### (3)弱网下的app的使用情况(有几个图截图老是失败，用手机拍的比较模糊)
 
 这个是我之前比较忽略的点，一般测试比较多的是无网或者网络错误情况下的界面UI的展示。现在我们默认的请求超时时间是60秒。这次主要介绍的还是fiddler,在工具栏中找到Rules，再到Rules列表中找到Customize Rules  
 
