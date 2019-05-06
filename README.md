@@ -55,7 +55,7 @@ Okhttp可以添加缓存目录并实现缓存，但仅限于GET请求，理论�
 
 项目地址：https://github.com/yale8848/RetrofitCache
 
-关于网络缓存的一些资料：  
+关于OKHTTP网络缓存的一些资料：  
 https://blog.csdn.net/polo2044/article/details/80779528  
 https://blog.csdn.net/polo2044/article/details/82228886  
 https://imweb.io/topic/5795dcb6fb312541492eda8c
