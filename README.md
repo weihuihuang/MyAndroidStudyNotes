@@ -52,6 +52,11 @@ http缓存可以分为两类：
 
 项目地址：https://github.com/yale8848/RetrofitCache
 
+关于网络缓存的一些资料：  
+https://blog.csdn.net/polo2044/article/details/80779528  
+https://blog.csdn.net/polo2044/article/details/82228886  
+https://imweb.io/topic/5795dcb6fb312541492eda8c
+
 但是我看了下我们app好像不是很有必要做一些网络缓存，如果有必要就做一下统计哪些页面需要然后定方案
 
 ## 三、进行网络监测  
