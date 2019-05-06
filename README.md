@@ -94,7 +94,7 @@ request-trickle-delay代表的是你网络请求的延迟时间，response-trick
 ![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/fiddler_6.png) 
 
 ### 自己的设想和实现  
-我自己的设想是做一个小的工具进行使用，现在做了一个比较粗糙的版本。迭代开发之后可以开启此功能对修改的页面进行监控，app在前台时网络请求消耗是否有异常，在后台时是否有不必要的网络请求在后台运行，再对相关的代码进行定位。   
+我自己的设想是做一个小的工具进行使用，现在做了一个比较粗糙的版本。迭代开发之后可以开启此功能对修改的页面进行监控，app在前台时网络请求消耗是否有异常，在后台时是否有不必要的网络请求在后台运行，再对相关的代码进行定位。
 
 项目地址：https://github.com/weihuihuang/TrafficMonitor   
 
