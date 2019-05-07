@@ -51,7 +51,12 @@ http缓存可以分为两类：
 
 对比缓存：是先向缓存数据库获取缓存数据的标识，然后用该标识去服务器请求该标识对应的数据是否失效，如果没有失效，服务器会返回304未失效响应，则客户端使用该标识对应的缓存。如果失效了，服务器会返回最新的数据和缓存规则，客户端使用返回的最新数据，同时将数据和缓存规则保存到缓存数据库中。
 
-Okhttp可以添加缓存目录并实现缓存，但仅限于GET请求，理论上POST请求也是可以实现的，官方给的说法是需要考虑的情况比较多，不是很有必要。这是我找的一个使用了retrofit2+okhttp3+rxjava作缓存的项目。主要思想就是自定义网络拦截器，根据自定义的注解决定是否，hook网络请求，可以参考下具体的实现。  
+Okhttp可以添加缓存目录并实现缓存，但仅限于GET请求，理论上POST请求也是可以实现的，官方给的说法是需要考虑的情况比较多，不是很有必要。   
+![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/httpcache.png)  
+上图是在httpclient构造的时候要先添加缓存目录，如果设置了缓存，接口请求到的信息会缓存在这个目录下面，下面是定义了两个比较简单的拦截器
+![image](https://github.com/weihuihuang/MyAndroidStudyNotes/blob/master/pic/networkpics/lnterceptor.png)  
+
+这是我找的一个使用了retrofit2+okhttp3+rxjava作缓存的项目。主要思想就是自定义网络拦截器，根据自定义的注解决定是否hook网络请求，可以参考下具体的实现。  
 
 项目地址：https://github.com/yale8848/RetrofitCache
 
