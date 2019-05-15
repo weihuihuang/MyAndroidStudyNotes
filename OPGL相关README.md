@@ -1,6 +1,8 @@
 # OPenGL学习部分内容
 ### 着色器语言学习
-https://github.com/wshxbqq/GLSL-Card  
+https://github.com/wshxbqq/GLSL-Card   
+
+关于顶点着色器和片元着色器内置变量 https://github.com/wshxbqq/GLSL-Card#%E5%86%85%E7%BD%AE%E7%9A%84%E7%89%B9%E6%AE%8A%E5%8F%98%E9%87%8F
 
 ### 关于GLSurfaceView，主要功能：
 （1）给OpenGL提供一个用于渲染的线程,防止主线程被堵塞，提高性能。  
