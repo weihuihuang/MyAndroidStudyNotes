@@ -25,7 +25,7 @@
 恰当的原则应该是优先选择类而不是接口。从类开始，如果接口的必须性变得d非常明确，那么就进行重构。接口是一种重要  
 的工具，但是它们容易被滥用。
 
-## 第十章 内部类
+## 第十章 内部类（篇幅较多，比较重要）
 （1）非静态内部类会隐式持有外部类的引用。  
 （2）拥有外部类对象之前是不可能创建内部类的，除非是静态内部类。  
 （3）闭包（closure）是一个可调用的对象，它记了一些信息，这些信息来自于创建它的作用域。  
@@ -33,5 +33,22 @@
 命名的构造器或者需要重载构造器，而匿名内部类只能用于初始化。另外有一个理由就是需要不止一个该内部类对象。  
 
 ## 第十一章 持有对象  
+（1）新程序中不应该使用过时的Vector、Hashtable和Stack。 
+
+## 第十二章 通过异常处理错误
+（1）Throwable对象可分为两种类型（指从Throwable继承而得到的类型）：
+1.Error用来表示编译时和系统错误（除特殊情况外，一般不用关心）   
+2.Exception 是可以被抛出的基本类型。Java程序员关心的类型通常是Exception。  其中异常又分为IOException 和RuntimeException  
+（2）异常分类：
+a.非检查异常：Error 和 RuntimeException 以及他们的子类。javac在编译时，不会提示和发现这样的异常，不要求在程序处理这些异常。
+所以如果愿意，我们可以编写代码处理（使用try...catch...finally）这样的异常，也可以不处理。对于这些异常，我们应该修正代码，而
+不是去通过异常处理器处理 。这样的异常发生的原因多半是代码写的有问题。如除0错误ArithmeticException，错误的强制类型转换错误
+ClassCastException，数组索引越界ArrayIndexOutOfBoundsException，使用了空对象NullPointerException等等。  
+b.检查异常：除了Error 和 RuntimeException的其它异常。javac强制要求程序员为这样的异常做预备处理工作（使用try...catch...finally或者throws）。  在方法中要么用try-catch语句捕获它并处理，要么用throws子句声明抛出它，否则编译不会通过。这样的异常一般是由程序的运行环境导致的。因为程序可能被运行
+在各种未知的环境下，而程序员无法干预用户如何使用他编写的程序，于是程序员就应该为这样的异常时刻准备着。如SQLException,IOException,ClassNotFoundException 等。  
+
+## 第十三章 字符串
+
+
 
 
