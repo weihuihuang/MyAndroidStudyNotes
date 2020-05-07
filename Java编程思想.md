@@ -70,7 +70,10 @@ ArrayList 其实也是基于数组实现的，内部包含一个动态扩容的�
 
 ## 第十七章 容器的深入研究
 ### 17.12 持有引用
-HashMap原理讲解比较好的文章：https://zhuanlan.zhihu.com/p/28501879
+HashMap原理讲解比较好的文章：  
+https://zhuanlan.zhihu.com/p/28501879   
+https://www.jianshu.com/p/3bf097f4cf0a   
+
 HashMap中推荐使用entrySet方式遍历Map类集合KV而不是keySet方式遍历
 https://blog.csdn.net/qq_35542218/article/details/83935017
 
