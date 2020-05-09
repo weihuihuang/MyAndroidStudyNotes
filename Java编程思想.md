@@ -78,4 +78,7 @@ HashMap中推荐使用entrySet方式遍历Map类集合KV而不是keySet方式遍
 https://blog.csdn.net/qq_35542218/article/details/83935017
 
 ## 第十八章 Java I/O 系统
+## 第十九章 枚举类型
+## 第二十章 注解
+定义：注解也
 
